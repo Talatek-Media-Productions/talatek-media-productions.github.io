@@ -1,484 +1,235 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.sand.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
-    </head>
-    <body>
-        <header class="container">
-            <nav>
-                <ul>
-                    <li>
-                        <strong>Talatek Media</strong>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#" class="secondary">Services</a>
-                    </li>
-                    <li>
-                        <details class="dropdown">
-                            <summary>Navigation</summary>
-                            <ul dir="rtl">
-                                <li>
-                                    <a href="#">About</a>
-                                </li>
-                                <li>
-                                    <a href="#">Services</a>
-                                </li>
-                                <li>
-                                    <a href="#">Projects</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main class="container-fluid">
-            <h1 id="headings">Headings</h1>
-            
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            
-            <hr />
-            
-            <h1 id="headings-with-text">Headings with Text</h1>
-            
-            <h1>Heading 1</h1>
-            <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
-            <h3>Heading 3</h3>
-            <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
-            <h4>Heading 4</h4>
-            <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
-            <h5>Heading 5</h5>
-            <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
-            <h6>Heading 6</h6>
-            <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
-            
-            <hr />
-            
-            <h1 id="text-block">Block Elements</h1>
-            
-            <h2 id="paragraph">Paragraphs and Images</h2>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.</p>
-            
-            <p><img alt="Test Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACHCAAAAAANGYs3AAADvElEQVR4Ae3ZhVbj7BrF8XPVuyl2iru7u4z74FRwKxGa7Mv5Vt6URTNaZkmQ/cf1ya8S/R9fWAILLLDAAgsssMACCyywwAILLPATTWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggd8g3jUfUhNmHjlY4GLBVIfxgqnE33e0cfuUwbHqsci/tQk4zwEssJPdOSqxXDG7mb8KqgL7R/suw+ydXJF3BTfHlwErcvLHRZ/xaUmCd5oAoGEjMEszjrDMGjmOcue/AI/g2h5OA6k+m5utALBoTM67DgtAesRm1NVoPQBY/Z9/npYMeBFIt3emgbUIAqurNY2Rv4JXmtHUZQHjX1Pp9o408JYk+0NNJgU0Gz+/1AKWMXb9PC0RcBZYdEl3DKljsgjM+GSwnyOd4ifgrFgsBr8Eo+6A9HoAdF6R161oNs+CmX2P9NeAryR5bqEp69Mr9BtwfFoy4B4Mm49uHd6bBTqqYqVlwO/LAuRJ8iNgx35vMfq1+ug/zBpwfFoi4Atgj6YhzJkvP1YJbjN3fAnoZ9gxcMb7hjBJ8hrYYAU4Pi0R8B5QODeNod+ArFWnKvAQTbVYNx8vgRzvG8RUdP8fV4Lj0xIBf8R9IyQLdYA1cVo9+P9l8PXdneduvlmZm8uY3/sM2JXg+LREwOtA/11vzGN82gIwF1QLzsTBN0MWoubNf7dYCY5NS+we9hjv5m0GWPg38HUzrKnPe/lcG5ZIvgO8SnBsWmLP4TP+mDeIGv+fwG+QOmJYL1ajf3BRATbTEgafA+/4U1mgEC2v/TDwEHpp6jbfzgMfaeo3YDMtWTB7kbnljx1Fa9d94Pxh4EHUeQylKfPtUgM6fYbSlAGbaQmD94DWI5LemxWSx8uh8HoEtSWSp8ByQKdYPXgNmDnn7YdaYJkkV4Exm7dbbTDg2LSEwFwCUNvVDFg2uQjUdjaj/Ej0M0BTu7VUPdhpBNAAtH3CtFkBtgBoTcNqNeDYtKTA3GoCgNTICcnNHoRlvtK0mQZQt149mJfDAOoWPdeKgN54GkAmu2jAsWkJnrV0c7vnpbvPT/Z2L3yWs/d3Tnw+KO/40g8/eIzyT/auyRl0xaY9+9O0Qxh7Ueel7Vqsvgxw/tQ8wYeAwssA96Cuo6fJAhb5IsDBoIWwzOfgRYDNWv9gK3sV6GKawAILLPDzSWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFvg/grmeGCDEU1MAAAAASUVORK5CYII= " title="A title element for this placeholder image."></p>
-            
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.</p>
-            
-            <h2 id="blockquote">Blockquote</h2>
-            
-            <p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            <blockquote>
-              "<strong>This is a blockquote.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl."
-            </blockquote>
-            <p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            
-            <h2 id="figure-caption">Figure-Caption</h2>
-            
-            <figure>
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACHCAAAAAANGYs3AAADvElEQVR4Ae3ZhVbj7BrF8XPVuyl2iru7u4z74FRwKxGa7Mv5Vt6URTNaZkmQ/cf1ya8S/R9fWAILLLDAAgsssMACCyywwAILLPATTWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggd8g3jUfUhNmHjlY4GLBVIfxgqnE33e0cfuUwbHqsci/tQk4zwEssJPdOSqxXDG7mb8KqgL7R/suw+ydXJF3BTfHlwErcvLHRZ/xaUmCd5oAoGEjMEszjrDMGjmOcue/AI/g2h5OA6k+m5utALBoTM67DgtAesRm1NVoPQBY/Z9/npYMeBFIt3emgbUIAqurNY2Rv4JXmtHUZQHjX1Pp9o408JYk+0NNJgU0Gz+/1AKWMXb9PC0RcBZYdEl3DKljsgjM+GSwnyOd4ifgrFgsBr8Eo+6A9HoAdF6R161oNs+CmX2P9NeAryR5bqEp69Mr9BtwfFoy4B4Mm49uHd6bBTqqYqVlwO/LAuRJ8iNgx35vMfq1+ug/zBpwfFoi4Atgj6YhzJkvP1YJbjN3fAnoZ9gxcMb7hjBJ8hrYYAU4Pi0R8B5QODeNod+ArFWnKvAQTbVYNx8vgRzvG8RUdP8fV4Lj0xIBf8R9IyQLdYA1cVo9+P9l8PXdneduvlmZm8uY3/sM2JXg+LREwOtA/11vzGN82gIwF1QLzsTBN0MWoubNf7dYCY5NS+we9hjv5m0GWPg38HUzrKnPe/lcG5ZIvgO8SnBsWmLP4TP+mDeIGv+fwG+QOmJYL1ajf3BRATbTEgafA+/4U1mgEC2v/TDwEHpp6jbfzgMfaeo3YDMtWTB7kbnljx1Fa9d94Pxh4EHUeQylKfPtUgM6fYbSlAGbaQmD94DWI5LemxWSx8uh8HoEtSWSp8ByQKdYPXgNmDnn7YdaYJkkV4Exm7dbbTDg2LSEwFwCUNvVDFg2uQjUdjaj/Ej0M0BTu7VUPdhpBNAAtH3CtFkBtgBoTcNqNeDYtKTA3GoCgNTICcnNHoRlvtK0mQZQt149mJfDAOoWPdeKgN54GkAmu2jAsWkJnrV0c7vnpbvPT/Z2L3yWs/d3Tnw+KO/40g8/eIzyT/auyRl0xaY9+9O0Qxh7Ueel7Vqsvgxw/tQ8wYeAwssA96Cuo6fJAhb5IsDBoIWwzOfgRYDNWv9gK3sV6GKawAILLPDzSWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFvg/grmeGCDEU1MAAAAASUVORK5CYII= " alt="A placeholder figure image." />
-              <figcaption>The figcaption element example</figcaption>
-            </figure>
-            
-            <h2 id="details-summary">Details-Summary</h2>
-            
-            <details>
-              <summary>The summary element example</summary>
-              <p>The details example text. It may be styled differently based on what browser or operating system you are using.</p>
-            </details>
-            
-            <hr />
-            
-            <h1 id="text-elements"> Text Elements</h1>
-            
-            <p>The <a href="#">a element</a>, <a href="https://example.com" target="_blank">external a element</a>, and <a href="#" title="Example Title">a element with title</a> examples</p>
-            <p>The <abbr>abbr element</abbr> and an <abbr title="Abbreviation">abbr</abbr> element with title examples</p>
-            <p>The <b>b element</b> example</p>
-            <p>The <cite>cite element</cite> example</p>
-            <p>The <code>code element</code> example</p>
-            <p>The <data value="3967381398">data element</data> example</p>
-            <p>The <del>del element</del> example</p>
-            <p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
-            <p>The <em>em element</em> example</p>
-            <p>The <i>i element</i> example</p>
-            <p>The <ins>ins element</ins> example</p>
-            <p>The <kbd>kbd element</kbd> example</p>
-            <p>The <mark>mark element</mark> example</p>
-            <p>The <q>q element</q> example</p>
-            <p>The <q>q element <q>inside</q> a q element</q> example</p>
-            <p>The <s>s element</s> example</p>
-            <p>The <samp>samp element</samp> example</p>
-            <p>The <small>small element</small> example</p>
-            <p>The <span>span element</span> example</p>
-            <p>The <strong>strong element</strong> example</p>
-            <p>The <sub>sub element</sub> example</p>
-            <p>The <sup>sup element</sup> example</p>
-            <p>The <time datetime="2005-05-15 19:00">time element</time> example</p>
-            <p>The <u>u element</u> example</p>
-            <p>The <var>var element</var> example</p>
-            
-            <hr />
-            
-            <h1 id="monospace">Monospace / Preformatted</h1>
-            <p>Code block wrapped in "pre" and "code" tags</p>
-            <pre><code>// Loop through Divs using Javascript.
-            var divs = document.querySelectorAll('div'), i;
-            
-            for (i = 0; i < divs.length; ++i) {
-              divs[i].style.color = "green";
-            }</code></pre>
-            <p>Monospace Text wrapped in "pre" tags</p>
-            <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p></pre>
-            
-            <hr />
-            
-            <h1 id="list-types">List Types</h1>
-            
-            <h2 id="ordered-list">Ordered List</h2>
-            <ol>
-              <li>List Item 1</li>
-              <li>List Item 2</li>
-              <li>List Item 3
-                <ol>
-                  <li>List Item 3.1</li>
-                  <li>List Item 3.2
-                    <ol>
-                      <li>List Item 3.2.1</li>
-                      <li>List Item 3.2.2</li>
-                    </ol>
-                  </li>
-                  <li>List Item 3.3</li>
-                </ol>
-              </li>
-              <li>List Item 4</li>
-            </ol>
-            
-            <h2 id="unordered-list">Unordered List</h2>
-            <ul>
-              <li>List Item 1</li>
-              <li>List Item 2</li>
-              <li>List Item 3
-                <ul>
-                  <li>List Item 3.1</li>
-                  <li>List Item 3.2
-                    <ul>
-                      <li>List Item 3.2.1</li>
-                      <li>List Item 3.2.2</li>
-                    </ul>
-                  </li>
-                  <li>List Item 3.3</li>
-                </ul>
-              </li>
-              <li>List Item 4</li>
-            </ul>
-            
-            <h2 id="definition-list">Definition List</h2>
-            <dl>
-              <dt>Definition Term 1</dt>
-              <dd>Definition Description 1</dd>
-              <dt>Definition Term 2</dt>
-              <dd>Definition Description 2</dd>
-            </dl>
-            
-            <hr />
-            
-            <h1 id="tables">Tables</h1>
-            
-            <table>
-              <caption>This is a table caption</caption>
-              <thead>
-                <tr>
-                  <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                </tr>
-                <tr class="even">
-                  <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                </tr>
-                <tr>
-                  <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                </tr>
-                <tr>
-                  <td colspan="3">A row with a cell spanning all 3 columns</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Table Footer 1</th><th>Table Footer 2</th><th>Table Footer 3</th>
-                </tr>
-              </tfoot>
-            </table>
-            
-            <hr />
-            
-            <h1 id="media-elements">Media</h1>
-            
-            <h2>The Audio Element:</h2>
-            <audio controls>
-              <source src="https://simpl.info/audio/audio/audio.ogg" type="audio/ogg" />
-              <source src="https://simpl.info/audio/audio/audio.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-            
-            <h2>The Video Element:</h2>
-            <video width="320" height="240" controls>
-              <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type='video/webm;codecs="vp8, vorbis"' />
-              <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-              <track src="https://www.html5rocks.com/en/tutorials/video/basics/devstories-en.vtt" label="English subtitles" kind="subtitles" srclang="en" default />
-              Your browser does not support the video tag.
-            </video>
-            
-            <h2>Embedded content:</h2>
-            <p>YouTube video (iframe):</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QE5KOfjKLy0" frameborder="0" allowfullscreen></iframe>
-            
-            <hr />
-            
-            <h1 id="form-elements">Form Elements</h1>
-            
-            <p>The Fieldset:</p>
-            <fieldset>
-              <legend>Legend</legend>
-            
-              <p>The Form:</p>
-            
-              <form>
-                <p><label for="text-field">Text Field:</label><br />
-                  <input type="text" id="text-field" />
-                </p>
-            
-                <p><label for="text-field-disabled">Disabled Text Field:</label><br />
-                  <input type="text" id="text-field-disabled" disabled value="I'm disabled" />
-                </p>
-            
-                <p><label for="text-field-readonly">Readonly Text Field:</label><br />
-                  <input type="text" id="text-field-readonly" readonly value="I'm readonly" />
-                </p>
-            
-                <p><label for="text-area">Text Area:</label><br />
-                  <textarea id="text-area"></textarea>
-                </p>
-            
-                <p><label for="text-area-disabled">Disabled Text Area:</label><br />
-                  <textarea id="text-area-disabled" disabled>I'm disabled</textarea>
-                </p>
-            
-                <p><label for="text-area-readonly">Readonly Text Area:</label><br />
-                  <textarea id="text-area-readonly" readonly>I'm readonly</textarea>
-                </p>
-            
-                <p><label for="select-element">Select Element:</label><br />
-                  <select id="select-element">
-                    <optgroup label="Option Group 1">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                    </optgroup>
-                    <optgroup label="Option Group 2">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3" disabled>Disabled Option</option>
-                    </optgroup>
-                  </select>
-                </p>
-            
-                <p><label for="select-element-disabled">Disabled Select Element:</label><br/>
-                  <select id="select-element-disabled" disabled>
-                    <option value="1">Unselectable Option</option>
-                    <option value="2">This option should not even be seen</option>
-                  </select>
-                </p>
-            
-                <p><label for="select_multi">Select multiple</label><br/>
-                  <select
-                    id="select_multi"
-                    multiple="multiple"
-                    name="select_multi"
-                  >
-                    <optgroup label="Group 1">
-                      <option value="1">Some text goes here </option>
-                      <option value="2">Another choice could be here</option>
-                      <option value="3">Yet another item to be chosen</option>
-                    </optgroup>
-                    <optgroup label="Group 2">
-                      <option value="4">Some text goes here</option>
-                      <option value="5">Another choice could be here</option>
-                      <option value="6">Yet another item to be chosen</option>
-                    </optgroup>
-                    <optgroup label="Group 3">
-                      <option value="7">Some text goes here</option>
-                      <option value="8">Another choice could be here</option>
-                      <option value="9">Yet another item to be chosen</option>
-                    </optgroup>
-                  </select>
-                </p>
-            
-                <p><label for="select_size">Select multiple [size="2"]</label><br/>
-                  <select
-                    id="select_size"
-                    name="select_size"
-                    size="2"
-                  >
-                    <optgroup label="Group 1">
-                      <option value="1">Some text goes here </option>
-                      <option value="2">Another choice could be here</option>
-                      <option value="3">Yet another item to be chosen</option>
-                    </optgroup>
-                    <optgroup label="Group 2">
-                      <option value="4">Some text goes here</option>
-                      <option value="5">Another choice could be here</option>
-                      <option value="6">Yet another item to be chosen</option>
-                    </optgroup>
-                  </select>
-                </p>
-            
-                <p>Radio Buttons:</p>
-                <div>
-                  <input type="radio" id="radio-1" name="radios" value="1" checked />
-                  <label for="radio-1">Radio 1</label>
-                </div>
-                <div>
-                  <input type="radio" id="radio-2" name="radios" value="2" />
-                  <label for="radio-2">Radio 2</label>
-                </div>
-                <div>
-                  <input type="radio" id="radio-3" name="radios" value="3" />
-                  <label for="radio-3">Radio 3</label>
-                </div>
-                <div>
-                  <input type="radio" id="radio-4" name="radios" value="4" disabled />
-                  <label for="radio-4">Radio Disabled</label>
-                </div>
-            
-                <p>Checkboxes:</p>
-                <div>
-                  <input type="checkbox" id="checkbox-1" name="checkboxes" value="1" checked />
-                  <label for="checkbox-1">Checkbox 1</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="checkbox-2" name="checkboxes" value="2" />
-                  <label for="checkbox-2">Checkbox 2</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="checkbox-3" name="checkboxes" value="3" />
-                  <label for="checkbox-3">Checkbox 3</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="checkbox-4" name="checkboxes" value="4" disabled />
-                  <label for="checkbox-4">Checkbox Disabled</label>
-                </div>
-            
-                <div>
-            
-                  <input type="checkbox" id="some-checkbox" onclick="this.a=this.indeterminate=!this.a " >
-                  <label for="some-checkbox" >
-                  Indeterminate Checkbox
-                  </label>
-            
-                </div>
-            
-                <div>
-            
-                  <input type="checkbox" id="cb1 " onclick=" if (cb1.readOnly) cb1.checked = cb1.readOnly = false; else if (!cb1.checked) cb1.readOnly = cb1.indeterminate = true; " >
-                  <label for="cb1" >
-                  Indeterminate Checkbox (Rotating)
-                  </label>
-            
-                </div>
-            
-                <p><label for="password">Password:</label><br />
-                  <input type="password" class="password" id="password" />
-                </p>
-            
-                <p><label for="file">File Input:</label><br />
-                  <input type="file" class="file" id="file" />
-                </p>
-            
-                <h3>HTML5-specific Form Elements</h3>
-            
-                <p><label for="email">Email:</label><br />
-                  <input type="email" id="email" />
-                </p>
-            
-                <p><label for="url">URL:</label><br />
-                  <input type="url" id="url" />
-                </p>
-            
-                <p><label for="tel">Telephone:</label><br />
-                  <input type="tel" id="tel" />
-                </p>
-            
-                <p><label for="number">Number:</label><br />
-                  <input type="number" id="number" min="0" max="10" step="1" value="5" />
-                </p>
-            
-                <p><label for="search">Search:</label><br />
-                  <input type="search" id="search" />
-                </p>
-            
-                <p><label for="date">Date:</label><br />
-                  <input type="date" id="date" />
-                </p>
-            
-                <p><label for="time">Time:</label><br />
-                  <input type="time" id="time" />
-                </p>
-            
-                <p><label for="color">Color:</label><br />
-                  <input type="color" id="color" />
-                </p>
-            
-                <p><label for="datalist">Datalist:</label><br />
-                  <input list="browsers" name="browser" type="datalist" id="datalist" />
-                  <datalist id="browsers">
-                    <option value="Internet Explorer" />
-                    <option value="Firefox" />
-                    <option value="Chrome" />
-                    <option value="Opera" />
-                    <option value="Safari" />
-                  </datalist>
-                </p>
-            
-                <p><label for="range">Range:</label><br />
-                  <input type="range" id="range" name="points" min="1" max="10" />
-                </p>
-            
-                <p><label for="output">Output:</label><br />
-                  <output name="result" id="output">42</output>
-                </p>
-            
-                <p><label for="progress">Progress:</label><br />
-                  <progress id="progress" value="65" max="100"></progress>
-                </p>
-            
-                <p><label for="meter">Meter:</label><br />
-                  <meter id="meter" min="200" max="500" value="350">350 degrees</meter>
-                </p>
-            
-                <p>
-                  <button class="button">Button Element</button>
-                  <input type="button" value="Input button">
-                  <input class="button" type="reset" value="Clear" />
-                  <input class="button" type="submit" value="Submit" />
-                </p>
-              </form>
-            
-            </fieldset>
-        </main>
-        <footer class="container">...</footer>
-    </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talatek Media Productions</title>
+<meta name="description" content="Talatek Media Productions — a media production studio crafting visual stories.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23000'/%3E%3Cpolygon points='50,18 61,42 87,45 67,62 73,88 50,74 27,88 33,62 13,45 39,42' fill='%23FFA631'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Primary">
+    <button class="nav-link" data-target="about">About</button>
+    <button class="nav-link" data-target="team">Team</button>
+
+    <a class="brand" href="#home" data-target="home" aria-label="Talatek Media Productions — Home">
+      <img class="brand-logo" src="assets/logo-lockup.png" alt="Talatek Media Productions">
+    </a>
+
+    <button class="nav-link" data-target="works">Works</button>
+    <button class="nav-link" data-target="contact">Contact</button>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-link" data-target="home">Home</button>
+    <button class="mobile-link" data-target="about">About</button>
+    <button class="mobile-link" data-target="team">Team</button>
+    <button class="mobile-link" data-target="works">Works</button>
+    <button class="mobile-link" data-target="contact">Contact</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow">Media Production Studio</p>
+      <h1>Stories, told with craft.</h1>
+      <p class="hero-copy">Talatek Media Productions develops, shoots and edits film, animation and commercial
+        work — from first sketch to final cut.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-target="works">See Our Work</button>
+        <button class="btn btn-ghost" data-target="contact">Get in Touch</button>
+      </div>
+    </div>
+    <button class="scroll-cue" data-target="about" aria-label="Scroll to About">
+      <span></span>
+    </button>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <p class="section-kicker reveal">About Us</p>
+
+      <div class="about-block reveal">
+        <div class="about-media placeholder-box">
+          <span>Group photo<br>or something</span>
+        </div>
+        <div class="about-copy">
+          <h2>The Team</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales felis diam, id placerat lacus
+            venenatis vitae. Sed iaculis eleifend enim vel vehicula. Phasellus pharetra sapien a odio blandit
+            facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        </div>
+      </div>
+
+      <div class="about-block reveal">
+        <div class="about-media">
+          <img src="assets/gordon-college-seal.png" alt="Gordon College, Olongapo City seal" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <h2>Class of ----</h2>
+          <p>Something about the school. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales
+            felis diam, id placerat lacus venenatis vitae. Sed iaculis eleifend enim vel vehicula. Phasellus
+            pharetra sapien a odio blandit facilisis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section team" id="team">
+    <div class="section-inner">
+      <p class="section-kicker reveal">The People</p>
+      <h2 class="section-title reveal">Team</h2>
+
+      <ul class="team-list">
+        <li class="team-item reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="team-copy">
+            <h3>Member 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales felis diam, id placerat
+              lacus venenatis vitae. Sed iaculis eleifend enim vel vehicula. Phasellus pharetra sapien a odio
+              blandit facilisis.</p>
+          </div>
+        </li>
+        <li class="team-item reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="team-copy">
+            <h3>Member 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales felis diam, id placerat
+              lacus venenatis vitae. Sed iaculis eleifend enim vel vehicula. Phasellus pharetra sapien a odio
+              blandit facilisis.</p>
+          </div>
+        </li>
+        <li class="team-item reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="team-copy">
+            <h3>Member 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales felis diam, id placerat
+              lacus venenatis vitae. Sed iaculis eleifend enim vel vehicula. Phasellus pharetra sapien a odio
+              blandit facilisis.</p>
+          </div>
+        </li>
+        <li class="team-item reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="team-copy">
+            <h3>Member 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales felis diam, id placerat
+              lacus venenatis vitae. Sed iaculis eleifend enim vel vehicula. Phasellus pharetra sapien a odio
+              blandit facilisis.</p>
+          </div>
+        </li>
+        <li class="team-item reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="team-copy">
+            <h3>Member 5</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales felis diam, id placerat
+              lacus venenatis vitae. Sed iaculis eleifend enim vel vehicula. Phasellus pharetra sapien a odio
+              blandit facilisis.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section works" id="works">
+    <div class="section-inner">
+      <p class="section-kicker reveal">Selected Projects</p>
+      <h2 class="section-title reveal">Works</h2>
+
+      <div class="works-grid">
+        <a class="work-card reveal" href="#" tabindex="0">
+          <div class="work-thumb placeholder-box"></div>
+          <div class="work-info">
+            <span class="work-title">Project Title</span>
+            <span class="work-tag">Add category</span>
+          </div>
+        </a>
+        <a class="work-card reveal" href="#" tabindex="0">
+          <div class="work-thumb placeholder-box"></div>
+          <div class="work-info">
+            <span class="work-title">Project Title</span>
+            <span class="work-tag">Add category</span>
+          </div>
+        </a>
+        <a class="work-card reveal" href="#" tabindex="0">
+          <div class="work-thumb placeholder-box"></div>
+          <div class="work-info">
+            <span class="work-title">Project Title</span>
+            <span class="work-tag">Add category</span>
+          </div>
+        </a>
+        <a class="work-card reveal" href="#" tabindex="0">
+          <div class="work-thumb placeholder-box"></div>
+          <div class="work-info">
+            <span class="work-title">Project Title</span>
+            <span class="work-tag">Add category</span>
+          </div>
+        </a>
+        <a class="work-card reveal" href="#" tabindex="0">
+          <div class="work-thumb placeholder-box"></div>
+          <div class="work-info">
+            <span class="work-title">Project Title</span>
+            <span class="work-tag">Add category</span>
+          </div>
+        </a>
+        <a class="work-card reveal" href="#" tabindex="0">
+          <div class="work-thumb placeholder-box"></div>
+          <div class="work-info">
+            <span class="work-title">Project Title</span>
+            <span class="work-tag">Add category</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section-inner contact-grid">
+      <div class="contact-info reveal">
+        <h2>Email</h2>
+        <a class="contact-value" href="mailto:info@gmail.com">info@gmail.com</a>
+
+        <h2>Contact</h2>
+        <a class="contact-value" href="tel:+971554844824">+971 554 844 824</a>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <label class="visually-hidden" for="contactEmail">Your email</label>
+        <input type="email" id="contactEmail" name="email" placeholder="your email address" required>
+
+        <label class="visually-hidden" for="contactMessage">Your message</label>
+        <textarea id="contactMessage" name="message" placeholder="or write us a message!" required></textarea>
+
+        <div class="form-row">
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn-send" aria-label="Send message">
+            <img src="assets/send-button.png" alt="">
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Talatek Media Productions. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>
