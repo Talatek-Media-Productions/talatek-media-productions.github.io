@@ -1,0 +1,13 @@
+<a class="work-card reveal" href="{{ .Permalink }}" tabindex="0">
+  <div class="work-thumb">
+    {{ with .Params.image }}
+    <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+    {{ else }}
+    <span class="placeholder-box"></span>
+    {{ end }}
+  </div>
+  <div class="work-info">
+    <span class="work-title">{{ .Title }}</span>
+    {{ with .Params.category }}<span class="work-tag">{{ . }}</span>{{ end }}
+  </div>
+</a>

@@ -100,7 +100,9 @@
   /* ---- Contact form ---- */
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
-  var CONTACT_EMAIL = "info@gmail.com";
+  /* single source of truth: the mailto: address shown on the page */
+  var contactLink = document.querySelector(".contact-value");
+  var CONTACT_EMAIL = contactLink ? contactLink.href.replace(/^mailto:/, "") : "talatekmedia.ph@gmail.com";
 
   if (form) {
     form.addEventListener("submit", function (e) {

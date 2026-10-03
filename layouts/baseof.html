@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+{{ with or .Description site.Params.description }}<meta name="description" content="{{ . }}">
+{{ end }}
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23000'/%3E%3Cpolygon points='50,18 61,42 87,45 67,62 73,88 50,74 27,88 33,62 13,45 39,42' fill='%23FFA631'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Primary">
+    <button class="nav-link" data-target="about">About</button>
+    <button class="nav-link" data-target="team">Team</button>
+
+    <a class="brand" href="#home" data-target="home" aria-label="Talatek Media Productions — Home">
+      <img class="brand-logo" src="{{ "assets/logo-lockup.png" | relURL }}" alt="Talatek Media Productions">
+    </a>
+
+    <button class="nav-link" data-target="works">Works</button>
+    <button class="nav-link" data-target="contact">Contact</button>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-link" data-target="home">Home</button>
+    <button class="mobile-link" data-target="about">About</button>
+    <button class="mobile-link" data-target="team">Team</button>
+    <button class="mobile-link" data-target="works">Works</button>
+    <button class="mobile-link" data-target="contact">Contact</button>
+  </div>
+</header>
+
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Talatek Media Productions. All rights reserved.</p>
+</footer>
+
+<script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

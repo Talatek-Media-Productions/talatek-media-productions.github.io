@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="section">
+  <div class="section-inner">
+    <p class="section-kicker reveal">Selected Projects</p>
+    <h1 class="section-title reveal">Works</h1>
+
+    <div class="works-grid">
+      {{ range .Pages.ByDate.Reverse }}
+      {{ partial "work-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

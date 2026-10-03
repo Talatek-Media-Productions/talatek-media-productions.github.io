@@ -421,6 +421,11 @@ h3 { font-family: var(--font-display); font-weight: 900; color: var(--white); }
 }
 .work-card:hover .work-info,
 .work-card:focus-visible .work-info { opacity: 1; }
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .work-title {
   font-family: var(--font-display);
   font-weight: 900;
@@ -514,6 +519,15 @@ h3 { font-family: var(--font-display); font-weight: 900; color: var(--white); }
 .btn-send:hover { transform: translateY(-1px) scale(1.03); }
 .btn-send:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
 .btn-send:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+/* ---------- Work single ---------- */
+
+.work-single .section-title { margin-bottom: 12px; }
+.work-date { color: var(--muted); margin: 0 0 32px; }
+.work-hero { width: 100%; border-radius: 16px; margin-bottom: 40px; }
+.work-body { max-width: 68ch; }
+.work-body p { margin: 0 0 20px; }
+.work-back { margin-top: 48px; }
 
 /* ---------- Footer ---------- */
 

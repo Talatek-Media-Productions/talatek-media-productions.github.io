@@ -1,0 +1,36 @@
+# Team members — add or remove entries here.
+# Fields: name, short (display nickname), image (in static/assets/), roles, bio.
+
+- name: Maezheillyn Bernal
+  short: Maezy
+  image: Maezy.png
+  roles: Director, Writer, Storyboard Artist, 2D Animator and Marketing Executive
+  bio: Beyond guiding creative projects, she also supports the team’s outreach and promotion, helping ensure that both the vision and the message reach the right audience while keeping projects moving forward.
+
+- name: Emmanuelle Gamboa
+  short: Emman
+  image: Emman.png
+  roles: Producer, Technical Director, Writer, Editor and Compositor
+  bio: He leads projects, shapes clear narratives, and brings visuals together into results, supporting the team’s vision from start to finish.
+
+- name: Jun Kenneth Reyna
+  short: Kenneth
+  image: Kenneth.png
+  roles: Storyboard Artist, Foley Artist, 2D Artist and Video Editor
+  bio: He visualizes stories through detailed boards, crafts immersive sound effects, creates expressive 2D art, and refines projects with video editing.
+
+- name: Deiarmhelle Bernal
+  short: Demhi
+  image: Demhi.png
+  roles: 2D Animator, Character Designer and Background Artist
+  bio: She works on shaping characters and environments with care and imagination, supporting the team’s storytelling through her art.
+
+- name: Chris John Bondoc
+  short: CJ
+  image: CJ.png
+  roles: 3D Modeller, 3D Artist, Texturing Artist and Sound Designer
+  bio: He develops and refines 3D assets, handling modeling and textures, while also shaping the project’s audio design to enhance the overall experience.
+
+- name: John Paul Laguardia
+  short: JP
+  image: JP.png

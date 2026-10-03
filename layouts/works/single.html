@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section work-single">
+  <div class="section-inner">
+    <p class="section-kicker reveal">{{ with .Params.category }}{{ . }}{{ else }}Project{{ end }}</p>
+    <h1 class="section-title reveal">{{ .Title }}</h1>
+    {{ if not .Date.IsZero }}<p class="work-date reveal">{{ .Date.Format "January 2, 2006" }}</p>{{ end }}
+
+    {{ with .Params.image }}
+    <img class="work-hero reveal" src="{{ . | relURL }}" alt="{{ $.Title }}">
+    {{ end }}
+
+    <div class="work-body reveal">
+      {{ .Content }}
+    </div>
+
+    <p class="work-back reveal"><a class="btn btn-ghost" href="{{ "/works/" | relURL }}">← Back to Works</a></p>
+  </div>
+</section>
+{{ end }}

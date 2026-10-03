@@ -1,0 +1,105 @@
+{{ define "main" }}
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow">Media Production Studio</p>
+      <h1>Stories, told with craft.</h1>
+      <p class="hero-copy">Talatek Media Productions develops, shoots and edits film, animation and commercial
+        work — from first sketch to final cut.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-target="works">See Our Work</button>
+        <button class="btn btn-ghost" data-target="contact">Get in Touch</button>
+      </div>
+    </div>
+    <button class="scroll-cue" data-target="about" aria-label="Scroll to About">
+      <span></span>
+    </button>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <p class="section-kicker reveal">About Us</p>
+
+      <div class="about-block reveal">
+        <div class="about-media placeholder-box">
+          <span>Group photo<br>or something</span>
+        </div>
+        <div class="about-copy">
+          <h2>The Team</h2>
+          <p>We Make.</p>
+          <p>TalaTek Media Productions aspires to be the leading multimedia studio in Olongapo City, guided by the belief that creativity grows when shared. Our mission is to make stories, animations, and projects that reflect culture, community, and imagination. We are committed to nurturing local talent, building collaborations, and growing steadily while staying true to our roots. More than just producing content, we make opportunities, connections, and a space where artists can thrive.</p>
+        </div>
+      </div>
+
+      <div class="about-block reveal">
+        <div class="about-media">
+          <img src="{{ "assets/gordon-college-seal.png" | relURL }}" alt="Gordon College, Olongapo City seal" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <h2>Class of 2027</h2>
+          <p>Gordon College, formerly known as Olongapo City Colleges, is a public educational institution established in 1999. The institution is supervised by the City Government of Olongapo through City Ordinance No. 1 series of 2025.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section team" id="team">
+    <div class="section-inner">
+      <p class="section-kicker reveal">The People</p>
+      <h2 class="section-title reveal">Team</h2>
+
+      <ul class="team-list">
+        {{ range hugo.Data.team }}
+        <li class="team-item reveal">
+          <img class="avatar" src="{{ printf "assets/%s" .image | relURL }}" alt="{{ .name }}">
+          <div class="team-copy">
+            <h3>{{ .name }}</h3>
+            <p><b>{{ .short }}</b>{{ with .roles }} serves as {{ . }}.{{ end }}{{ with .bio }} {{ . }}{{ end }}</p>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section works" id="works">
+    <div class="section-inner">
+      <p class="section-kicker reveal">Selected Projects</p>
+      <h2 class="section-title reveal">Works</h2>
+
+      <div class="works-grid">
+        {{ range (where site.RegularPages "Section" "works").ByDate.Reverse }}
+        {{ partial "work-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section-inner contact-grid">
+      <div class="contact-info reveal">
+        <h2>Email</h2>
+        <a class="contact-value" href="mailto:talatekmedia.ph@gmail.com">talatekmedia.ph@gmail.com</a>
+
+        <h2>Contact</h2>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <label class="visually-hidden" for="contactEmail">Your email</label>
+        <input type="email" id="contactEmail" name="email" placeholder="your email address" required>
+
+        <label class="visually-hidden" for="contactMessage">Your message</label>
+        <textarea id="contactMessage" name="message" placeholder="or write us a message!" required></textarea>
+
+        <div class="form-row">
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn-send" aria-label="Send message">
+            <img src="{{ "assets/send-button.png" | relURL }}" alt="">
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+{{ end }}

@@ -1,0 +1,7 @@
+baseURL = "https://talatek-media-productions.github.io/"
+locale = "en"
+title = "Talatek Media Productions"
+enableRobotsTXT = true
+
+[params]
+  description = "Talatek Media Productions — a media production studio crafting visual stories."
