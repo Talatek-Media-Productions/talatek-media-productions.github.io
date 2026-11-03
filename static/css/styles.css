@@ -4,21 +4,21 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/Montserrat-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-MediumItalic.ttf") format("truetype");
+  src: url("../assets/fonts/Montserrat-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Black.ttf") format("truetype");
+  src: url("../assets/fonts/Montserrat-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
